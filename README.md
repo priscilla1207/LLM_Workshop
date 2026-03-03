@@ -30,7 +30,7 @@ User Query
 
 ## Tech Stack
 - **Language**: Python
-- **Base Model**: Open-source LLM (`gpt2` used as a quick, small placeholder; replace with LLaMA/Mistral for production accuracy)
+- **Base Model**: Open-source LLM (`gpt2` used as a quick, small placeholder; replace with LLaMA/Mistral for production accuracy, switched to Groq for better accuracy)
 - **Embeddings**: `sentence-transformers` (`all-MiniLM-L6-v2`)
 - **Vector DB**: `faiss-cpu`
 - **Backend API**: `FastAPI` + `Uvicorn`
