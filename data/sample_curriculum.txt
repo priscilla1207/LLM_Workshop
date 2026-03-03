@@ -1,0 +1,101 @@
+Chapter 1: Introduction to Physics
+Physics is the natural science that studies matter, its fundamental constituents, its motion and behavior through space and time, and the related entities of energy and force. Physics is one of the most fundamental scientific disciplines, and its main goal is to understand how the universe behaves. The scope of physics covers a wide range of phenomena, from the smallest sub-atomic particles to the largest galaxies. Physics uses the scientific method to formulate and test hypotheses based on observation, experiment, and mathematical analysis. Key branches of physics include mechanics, thermodynamics, electromagnetism, optics, and modern physics.
+
+Section 1.1: Units and Measurements
+All physical quantities are measured using standardized units. The International System of Units (SI) is the globally accepted system. The seven fundamental SI units are: meter (m) for length, kilogram (kg) for mass, second (s) for time, ampere (A) for electric current, kelvin (K) for temperature, mole (mol) for amount of substance, and candela (cd) for luminous intensity. Dimensional analysis is a technique used to check the correctness of equations by analyzing the dimensions (units) of each term. Significant figures represent the precision of a measurement. Errors in measurement can be systematic (consistent bias) or random (unpredictable variations).
+
+Section 1.2: Scalars and Vectors
+Physical quantities are classified as scalars or vectors. A scalar quantity has only magnitude (e.g., mass, temperature, speed, energy). A vector quantity has both magnitude and direction (e.g., displacement, velocity, acceleration, force). Vectors can be added using the triangle law or parallelogram law of vector addition. The dot product (scalar product) of two vectors gives a scalar result and equals the product of their magnitudes and cosine of the angle between them. The cross product (vector product) gives a vector result perpendicular to the plane of the two vectors, with magnitude equal to the product of their magnitudes and sine of the angle between them.
+
+Chapter 2: Kinematics
+Kinematics is the branch of classical mechanics that describes the motion of points, bodies, and systems of bodies without considering the forces that cause them to move. It deals with concepts such as displacement, velocity, and acceleration.
+
+Section 2.1: Motion in a Straight Line
+Motion in a straight line is the simplest form of motion, also called rectilinear motion. Displacement is the shortest distance between the initial and final position of an object, and it is a vector quantity. Speed is the rate of change of distance and is a scalar, while velocity is the rate of change of displacement and is a vector. Acceleration is the rate of change of velocity. The equations of motion for uniformly accelerated motion are: v = u + at, s = ut + (1/2)at^2, and v^2 = u^2 + 2as, where u is initial velocity, v is final velocity, a is acceleration, s is displacement, and t is time.
+
+Section 2.2: Motion in a Plane
+Projectile motion is motion in two dimensions under the influence of gravity alone. A projectile follows a parabolic trajectory. The horizontal component of velocity remains constant, while the vertical component changes due to gravitational acceleration (g = 9.8 m/s^2). The time of flight is T = 2u*sin(theta)/g, maximum height is H = u^2*sin^2(theta)/(2g), and range is R = u^2*sin(2*theta)/g, where u is the initial velocity and theta is the angle of projection. Circular motion occurs when an object moves along a circular path. The centripetal acceleration is directed toward the center and equals v^2/r, where v is the speed and r is the radius.
+
+Chapter 3: Laws of Motion
+Sir Isaac Newton formulated three fundamental laws of motion that form the foundation of classical mechanics.
+
+Section 3.1: Newton's First Law of Motion
+Newton's First Law states that an object at rest stays at rest, and an object in motion stays in motion with the same speed and direction, unless acted upon by an unbalanced external force. This is also known as the law of inertia. Inertia is the property of a body to resist changes in its state of motion. Mass is a measure of inertia – the greater the mass, the greater the inertia.
+
+Section 3.2: Newton's Second Law of Motion
+Newton's Second Law states that the rate of change of momentum of an object is directly proportional to the net external force applied and takes place in the direction of the force. Mathematically, F = ma, where F is force, m is mass, and a is acceleration. The SI unit of force is the newton (N), where 1 N = 1 kg*m/s^2. Momentum is defined as p = mv, the product of mass and velocity. The impulse-momentum theorem states that impulse (force multiplied by time) equals the change in momentum.
+
+Section 3.3: Newton's Third Law of Motion
+Newton's Third Law states that for every action, there is an equal and opposite reaction. This means forces always occur in pairs. The action and reaction forces act on different bodies. Applications include rocket propulsion (exhaust gases push backward, rocket moves forward), walking (foot pushes ground backward, ground pushes foot forward), and swimming (hands push water backward, water pushes swimmer forward).
+
+Section 3.4: Friction
+Friction is a force that opposes the relative motion between two surfaces in contact. Static friction prevents an object from starting to move and can vary from zero up to a maximum value. Kinetic friction acts on a moving object and is generally less than maximum static friction. The coefficient of friction (mu) relates the frictional force to the normal force: f = mu * N. Rolling friction is much smaller than sliding friction, which is why wheels are used for transportation.
+
+Chapter 4: Work, Energy, and Power
+Work, energy, and power are fundamental concepts that describe how forces cause changes in the energy of a system.
+
+Section 4.1: Work
+Work is done when a force causes displacement of an object. Mathematically, W = F * d * cos(theta), where F is the force, d is the displacement, and theta is the angle between the force and displacement vectors. Work is a scalar quantity measured in joules (J). Positive work is done when the force and displacement are in the same direction. Negative work is done when they are in opposite directions. Zero work is done when the force is perpendicular to the displacement.
+
+Section 4.2: Energy
+Energy is the capacity to do work. Kinetic energy is the energy of motion, given by KE = (1/2)mv^2. Potential energy is the energy stored due to position or configuration. Gravitational potential energy is PE = mgh, where m is mass, g is gravitational acceleration, and h is height. The work-energy theorem states that the net work done on an object equals the change in its kinetic energy. The law of conservation of energy states that energy can neither be created nor destroyed, only transformed from one form to another. The total energy of an isolated system remains constant.
+
+Section 4.3: Power
+Power is the rate of doing work or the rate of energy transfer. P = W/t = F*v, where W is work, t is time, F is force, and v is velocity. The SI unit of power is the watt (W), where 1 W = 1 J/s. One horsepower (hp) equals approximately 746 watts.
+
+Chapter 5: Thermodynamics
+Thermodynamics is the branch of physics that deals with heat, work, and temperature, and their relation to energy, radiation, and physical properties of matter.
+
+Section 5.1: Thermal Equilibrium and Zeroth Law
+The Zeroth Law of Thermodynamics states that if two systems are each in thermal equilibrium with a third system, then they are in thermal equilibrium with each other. This law forms the basis for the concept of temperature and the use of thermometers. Temperature is a measure of the average kinetic energy of the particles in a substance.
+
+Section 5.2: First Law of Thermodynamics
+The First Law of Thermodynamics is a statement of the conservation of energy. It states that the change in internal energy of a system equals the heat added to the system minus the work done by the system: delta_U = Q - W. Internal energy is the total energy of all molecules in the system. Heat (Q) is energy transferred due to temperature difference. Work (W) is energy transferred due to force acting over a distance.
+
+Section 5.3: Second Law of Thermodynamics
+The Second Law of Thermodynamics states that the total entropy of an isolated system can never decrease. Heat naturally flows from a hotter body to a colder body. It is impossible to construct a heat engine that converts all heat into work with 100% efficiency. The Carnot engine is the most efficient theoretical engine operating between two temperatures, with efficiency = 1 - T_cold/T_hot.
+
+Section 5.4: Heat Transfer
+Heat can be transferred by three mechanisms: conduction, convection, and radiation. Conduction is the transfer of heat through a material without bulk motion of the material, governed by Fourier's law. Convection is the transfer of heat by the bulk movement of a fluid (liquid or gas). Radiation is the transfer of heat through electromagnetic waves, requiring no medium. All objects emit thermal radiation, with the amount depending on temperature.
+
+Chapter 6: Electromagnetism
+Electromagnetism is a branch of physics involving the study of the electromagnetic force, a type of physical interaction that occurs between electrically charged particles.
+
+Section 6.1: Electric Charges and Coulomb's Law
+Electric charge is a fundamental property of matter. There are two types of charges: positive and negative. Like charges repel, unlike charges attract. Coulomb's Law states that the electrostatic force between two point charges is directly proportional to the product of their charges and inversely proportional to the square of the distance between them: F = k*q1*q2/r^2, where k = 9 x 10^9 N*m^2/C^2. Charge is quantized (exists in integer multiples of the elementary charge e = 1.6 x 10^-19 C) and conserved.
+
+Section 6.2: Electric Field and Potential
+An electric field is a region of space around a charged object where another charged object experiences a force. The electric field strength E = F/q = kQ/r^2 for a point charge. Electric potential (V) at a point is the work done per unit positive charge in bringing a test charge from infinity to that point: V = kQ/r. The potential difference between two points drives the flow of current in a circuit. Electric field lines point from positive to negative charges and never cross each other.
+
+Section 6.3: Current, Resistance, and Ohm's Law
+Electric current is the rate of flow of electric charge: I = Q/t. The SI unit of current is the ampere (A). Ohm's Law states that the current through a conductor is directly proportional to the voltage across it and inversely proportional to its resistance: V = IR. Resistance depends on the material, length, and cross-sectional area of the conductor: R = rho*L/A, where rho is resistivity. Resistors in series add directly: R_total = R1 + R2. Resistors in parallel add reciprocally: 1/R_total = 1/R1 + 1/R2.
+
+Section 6.4: Magnetic Effects of Current
+A current-carrying conductor produces a magnetic field around it. The direction of the magnetic field is given by the right-hand rule. A solenoid (coil of wire) produces a uniform magnetic field inside it, similar to a bar magnet. The force on a current-carrying conductor in a magnetic field is F = BIL*sin(theta), where B is the magnetic field strength, I is the current, L is the length, and theta is the angle between the current direction and the magnetic field.
+
+Section 6.5: Electromagnetic Induction
+Faraday's Law of Electromagnetic Induction states that a changing magnetic flux through a circuit induces an electromotive force (EMF) in the circuit. The induced EMF is proportional to the rate of change of magnetic flux: EMF = -d(phi)/dt. Lenz's Law states that the direction of the induced current is such that it opposes the change in magnetic flux that produced it. Applications include electric generators, transformers, and induction motors.
+
+Chapter 7: Optics
+Optics is the branch of physics that studies the behavior and properties of light and its interactions with matter.
+
+Section 7.1: Reflection of Light
+The law of reflection states that the angle of incidence equals the angle of reflection, and the incident ray, reflected ray, and normal all lie in the same plane. In a plane mirror, the image is virtual, erect, and laterally inverted. Concave mirrors converge parallel rays to a focal point and are used in telescopes, headlights, and shaving mirrors. Convex mirrors diverge parallel rays and are used as rearview mirrors in vehicles because they provide a wider field of view. The mirror equation is 1/f = 1/v + 1/u, where f is focal length, v is image distance, and u is object distance.
+
+Section 7.2: Refraction of Light
+Refraction is the bending of light when it passes from one medium to another due to a change in speed. Snell's Law relates the angles of incidence and refraction: n1*sin(i) = n2*sin(r), where n1 and n2 are the refractive indices of the two media. Total internal reflection occurs when light travels from a denser to a rarer medium at an angle greater than the critical angle. Applications include optical fibers, prisms, and mirages. Lenses refract light to form images: convex lenses converge light (used in magnifying glasses, cameras), while concave lenses diverge light (used in spectacles for myopia).
+
+Section 7.3: Wave Optics
+Light exhibits wave properties including interference, diffraction, and polarization. Young's double-slit experiment demonstrates interference of light, producing bright and dark fringes. Constructive interference occurs when the path difference is an integer multiple of the wavelength. Destructive interference occurs when the path difference is an odd multiple of half the wavelength. Diffraction is the bending of light around obstacles or through narrow openings.
+
+Chapter 8: Modern Physics
+Modern physics encompasses developments from the early 20th century onward that fundamentally changed our understanding of nature.
+
+Section 8.1: Dual Nature of Matter and Radiation
+The photoelectric effect demonstrates that light has particle-like properties. When light of sufficient frequency strikes a metal surface, electrons are emitted. Einstein's photoelectric equation is KE_max = hf - phi, where h is Planck's constant (6.63 x 10^-34 J*s), f is the frequency of light, and phi is the work function of the metal. De Broglie's hypothesis states that all matter has wave-like properties, with wavelength lambda = h/(mv), where m is mass and v is velocity.
+
+Section 8.2: Atoms and Nuclei
+Bohr's model of the hydrogen atom explains the discrete energy levels of electrons. Electrons orbit the nucleus in specific orbits without radiating energy. When an electron jumps from a higher to a lower energy level, it emits a photon with energy equal to the difference between the levels: E = hf. The nucleus contains protons and neutrons. Radioactive decay occurs when unstable nuclei emit alpha particles, beta particles, or gamma rays. Nuclear fission is the splitting of heavy nuclei into lighter nuclei, releasing enormous energy (used in nuclear power plants). Nuclear fusion is the combining of light nuclei into heavier nuclei, releasing even more energy (powers the sun and stars).
+
+Section 8.3: Semiconductor Electronics
+Semiconductors are materials with electrical conductivity between conductors and insulators. Silicon and germanium are common semiconductors. Doping with pentavalent impurities creates n-type semiconductors (excess electrons), while doping with trivalent impurities creates p-type semiconductors (excess holes). A p-n junction diode allows current to flow in only one direction (forward bias) and blocks it in the reverse direction. Applications include rectifiers, LEDs, and solar cells. Transistors (npn or pnp) are used as amplifiers and switches, forming the basis of modern digital electronics.

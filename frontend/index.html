@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum-Native LLM | AI Tutor</title>
+    <meta name="description" content="An AI tutor that answers questions strictly from curriculum-approved content using RAG + Groq LLM.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- Animated background particles -->
+    <div class="bg-particles" id="particles"></div>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-glow"></div>
+            <div class="logo-section">
+                <div class="logo-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M16 2L2 9L16 16L30 9L16 2Z" fill="url(#grad1)" opacity="0.9"/>
+                        <path d="M2 23L16 30L30 23" stroke="url(#grad2)" stroke-width="2" fill="none"/>
+                        <path d="M2 16L16 23L30 16" stroke="url(#grad2)" stroke-width="2" fill="none"/>
+                        <defs>
+                            <linearGradient id="grad1" x1="2" y1="2" x2="30" y2="16">
+                                <stop stop-color="#6366f1"/>
+                                <stop offset="1" stop-color="#8b5cf6"/>
+                            </linearGradient>
+                            <linearGradient id="grad2" x1="2" y1="16" x2="30" y2="30">
+                                <stop stop-color="#6366f1"/>
+                                <stop offset="1" stop-color="#a78bfa"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="app-title">Curriculum-Native LLM</h1>
+                    <p class="app-subtitle">RAG-Powered AI Tutor · Syllabus-Locked Answers</p>
+                </div>
+            </div>
+            <div class="header-badges">
+                <span class="badge badge-rag">RAG</span>
+                <span class="badge badge-groq">Groq LLM</span>
+                <span class="badge badge-faiss">FAISS</span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Left Panel: Query -->
+            <section class="query-panel">
+                <div class="panel-card">
+                    <div class="panel-header">
+                        <div class="panel-icon">💡</div>
+                        <h2>Ask a Question</h2>
+                    </div>
+                    <p class="panel-description">Ask any question from the curriculum. Out-of-syllabus questions will be rejected.</p>
+                    
+                    <div class="input-group">
+                        <textarea 
+                            id="questionInput" 
+                            placeholder="e.g. What is Newton's second law of motion?"
+                            rows="3"
+                        ></textarea>
+                        <button id="askBtn" onclick="askQuestion()">
+                            <span class="btn-text">Ask AI Tutor</span>
+                            <span class="btn-loader" id="btnLoader">
+                                <svg class="spinner" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" fill="none" stroke-dasharray="30 70"/>
+                                </svg>
+                            </span>
+                            <svg class="btn-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Quick Questions -->
+                    <div class="quick-questions" id="quickQuestions">
+                        <p class="quick-label">Try these:</p>
+                        <div class="quick-chips" id="quickChips">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Topics Panel -->
+                <div class="panel-card topics-card">
+                    <div class="panel-header" onclick="toggleTopics()">
+                        <div class="panel-icon">📚</div>
+                        <h2>Curriculum Topics</h2>
+                        <svg class="expand-icon" id="topicsExpandIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </div>
+                    <div class="topics-list" id="topicsList">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Panel: Answer -->
+            <section class="answer-panel">
+                <div class="panel-card answer-card" id="answerCard">
+                    <!-- Empty State -->
+                    <div class="empty-state" id="emptyState">
+                        <div class="empty-illustration">
+                            <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+                                <circle cx="60" cy="60" r="50" stroke="#2d2d3f" stroke-width="2" stroke-dasharray="8 4"/>
+                                <path d="M45 50C45 44.477 49.477 40 55 40H65C70.523 40 75 44.477 75 50V55C75 60.523 70.523 65 65 65H62L55 75V65H55C49.477 65 45 60.523 45 55V50Z" fill="#1e1e2e" stroke="#6366f1" stroke-width="1.5"/>
+                                <circle cx="55" cy="52" r="2" fill="#6366f1"/>
+                                <circle cx="60" cy="52" r="2" fill="#8b5cf6"/>
+                                <circle cx="65" cy="52" r="2" fill="#a78bfa"/>
+                            </svg>
+                        </div>
+                        <h3>Ask a Curriculum Question</h3>
+                        <p>Your AI-powered answer will appear here with step-by-step explanations.</p>
+                    </div>
+
+                    <!-- Loading State -->
+                    <div class="loading-state" id="loadingState" style="display:none;">
+                        <div class="loading-animation">
+                            <div class="pulse-ring"></div>
+                            <div class="pulse-ring delay-1"></div>
+                            <div class="pulse-ring delay-2"></div>
+                            <div class="loading-brain">🧠</div>
+                        </div>
+                        <h3>Thinking...</h3>
+                        <p class="loading-step" id="loadingStep">Retrieving curriculum context...</p>
+                    </div>
+
+                    <!-- Answer State -->
+                    <div class="answer-state" id="answerState" style="display:none;">
+                        <div class="answer-header">
+                            <div class="domain-badge" id="domainBadge">
+                                <span class="domain-dot"></span>
+                                <span id="domainText">In Curriculum</span>
+                            </div>
+                        </div>
+
+                        <div class="answer-question" id="answerQuestion"></div>
+                        
+                        <div class="answer-body" id="answerBody"></div>
+
+                        <!-- Retrieved Context -->
+                        <div class="context-section" id="contextSection" style="display:none;">
+                            <div class="context-header" onclick="toggleContext()">
+                                <span>📄 Retrieved Curriculum Context</span>
+                                <svg class="expand-icon" id="contextExpandIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 9l6 6 6-6"/>
+                                </svg>
+                            </div>
+                            <div class="context-body" id="contextBody">
+                                <!-- Populated dynamically -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Architecture Info -->
+                <div class="panel-card arch-card">
+                    <div class="arch-flow">
+                        <div class="arch-step">
+                            <div class="arch-icon">❓</div>
+                            <span>User Query</span>
+                        </div>
+                        <div class="arch-arrow">→</div>
+                        <div class="arch-step">
+                            <div class="arch-icon">🔍</div>
+                            <span>RAG Retriever</span>
+                        </div>
+                        <div class="arch-arrow">→</div>
+                        <div class="arch-step">
+                            <div class="arch-icon">📝</div>
+                            <span>Prompt Builder</span>
+                        </div>
+                        <div class="arch-arrow">→</div>
+                        <div class="arch-step active">
+                            <div class="arch-icon">🧠</div>
+                            <span>Groq LLM</span>
+                        </div>
+                        <div class="arch-arrow">→</div>
+                        <div class="arch-step">
+                            <div class="arch-icon">✅</div>
+                            <span>Answer</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
